@@ -8,6 +8,65 @@
     list-style: none;
   }
 
+  .pagewidthbg {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .menu {
+    position: relative;
+    z-index: 3;
+    float: left;
+  }
+
+  .headertop {
+    height: 100px;
+    width: 960px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    z-index: 3;
+  }
+
+  .wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 930px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    min-height: 400px;
+  }
+
+  .meet-me {
+    display: none;
+    background: white;
+    opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 930px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    min-height: 400px;
+  }
+
+  .pagewidth {
+    width: 960px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: white;*/
+    padding-bottom: 10px;
+    z-index: 3;
+    position: relative;
+  }
+
   #page_overlay {
     width:100%;
     z-index:2;
@@ -17,7 +76,7 @@
     font-size:30px;
     padding:10px;
     /*background-color:#fff;*/
-    color:#000;
+    color:#fff;
     margin-top:40px;
 
     /* Display on top of slideshow */
