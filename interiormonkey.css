@@ -19,6 +19,16 @@
     float: left;
   }
 
+  .menu ul li {
+    padding: 15px 0;
+  }
+
+  .menu ul li a{
+    color: #F28A21;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   .headertop {
     height: 100px;
     width: 960px;
@@ -31,7 +41,10 @@
     z-index: 3;
   }
 
-  .wrapper {
+  .meet-me, .sustainability, .contact-me, .clients, .main {
+    display: none;
+    background: white;
+    opacity: 0.7;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 930px;
@@ -42,18 +55,10 @@
     min-height: 400px;
   }
 
-  .meet-me {
-    display: none;
-    background: white;
-    opacity: 0.5;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 930px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    min-height: 400px;
+  .main {
+    display: block;
+    background: none;
+    color: #98BF21;
   }
 
   .pagewidth {
@@ -65,23 +70,6 @@
     padding-bottom: 10px;
     z-index: 3;
     position: relative;
-  }
-
-  #page_overlay {
-    width:100%;
-    z-index:2;
-  }
-
-  #page_content {
-    font-size:30px;
-    padding:10px;
-    /*background-color:#fff;*/
-    color:#fff;
-    margin-top:40px;
-
-    /* Display on top of slideshow */
-    z-index:2;
-    position:relative; /* This is very important! */
   }
 
   img#bg {
@@ -124,11 +112,3 @@
     color:#333333;
   }
 
-  a, a:link, a:visited, a:active {
-    text-decoration:none;
-    color:#A62F00;
-  }
-
-  a:hover {
-    text-decoration:underline;
-  }

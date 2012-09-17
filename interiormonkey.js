@@ -2,15 +2,22 @@ var aImages = new Array();
 var aURL = new Array();
 var aArtists = new Array();
 var iPrev = -1;
-var iRnd = -1;
+var iNext = -1;
 
-aImages[0] = "images/esquire-master.jpg";
-aImages[1] = "images/dev1.jpg";
-aImages[2] = "images/dev2.jpg";
-aImages[3] = "images/dev3.jpg";
-aImages[4] = "images/dev4.jpg";
-aImages[5] = "images/franklin-stairs.jpg";
-aImages[6] = "images/franklin-lobby.jpg";
+aImages[0] = "images/slideshow/Change1.jpg";
+aImages[1] = "images/slideshow/Change2.jpg";
+aImages[2] = "images/slideshow/Change3.jpg";
+aImages[3] = "images/slideshow/Change4.jpg";
+aImages[4] = "images/slideshow/Change5.jpg";
+aImages[5] = "images/slideshow/DBC1.jpg";
+aImages[6] = "images/slideshow/DBC2.jpg";
+aImages[7] = "images/slideshow/DBC3.jpg";
+aImages[8] = "images/slideshow/DBC4.jpg";
+aImages[9] = "images/slideshow/DBC5.jpg";
+aImages[10] = "images/slideshow/DBC6.jpg";
+aImages[11] = "images/slideshow/LocBox1.jpg";
+aImages[12] = "images/slideshow/Pantheon1.jpg";
+aImages[13] = "images/slideshow/Pantheon2.jpg";
 
 aURL[0] = "http://kunst.canvasinabox.com/?_globalsearch=47-7";
 aURL[1] = "http://kunst.canvasinabox.com/?_globalsearch=48-7";
@@ -19,6 +26,13 @@ aURL[3] = "http://kunst.canvasinabox.com/?_globalsearch=133-18";
 aURL[4] = "http://kunst.canvasinabox.com/?_globalsearch=174-27";
 aURL[5] = "http://kunst.canvasinabox.com/?_globalsearch=173-27";
 aURL[6] = "http://kunst.canvasinabox.com/?_globalsearch=25-5";
+aURL[7] = "http://kunst.canvasinabox.com/?_globalsearch=47-7";
+aURL[8] = "http://kunst.canvasinabox.com/?_globalsearch=48-7";
+aURL[9] = "http://kunst.canvasinabox.com/?_globalsearch=46-7";
+aURL[10] = "http://kunst.canvasinabox.com/?_globalsearch=133-18";
+aURL[11] = "http://kunst.canvasinabox.com/?_globalsearch=174-27";
+aURL[12] = "http://kunst.canvasinabox.com/?_globalsearch=173-27";
+aURL[13] = "http://kunst.canvasinabox.com/?_globalsearch=25-5";
 
 aArtists[0] = "Marcel Verkaart";
 aArtists[1] = "Marcel Verkaart";
@@ -27,9 +41,19 @@ aArtists[3] = "Marco Schippers";
 aArtists[4] = "Sylvia Hennequin";
 aArtists[5] = "Sylvia Hennequin";
 aArtists[6] = "Jonathan Vos";
+aArtists[7] = "Marcel Verkaart";
+aArtists[8] = "Marcel Verkaart";
+aArtists[9] = "Marcel Verkaart";
+aArtists[10] = "Marco Schippers";
+aArtists[11] = "Sylvia Hennequin";
+aArtists[12] = "Sylvia Hennequin";
+aArtists[13] = "Jonathan Vos";
 
 $(document).ready(function() {
 
+  if (location.hash !== "") {
+    showPage(location.hash.substring(1, location.hash.length));
+  }
   /* Define the function that triggers to fade in the background as soon as the image has loaded */
   $("img#bg").load(function() {
     /* Fade in during 3 seconds */
@@ -52,7 +76,7 @@ $(document).ready(function() {
   setTimeout(LoadImages,100);
   $('a').click(function(){
     var page = this.dataset.for;
-    $('.'+page).show();
+    showPage(page);
   });
 
 });
@@ -72,13 +96,17 @@ function LoadImage(iNr) {
 };
 
 function LoadImages() {
-  /* Select a random image number and make sure this is not equal to the previous image */
-  while(iPrev == iRnd) {
-    iRnd = Math.floor(Math.random()*aImages.length);
+  if (iNext == aImages.length -1) {
+    iNext = 0;
+    iPrev = aImages.length - 1;
+  } else {
+    iNext = iPrev+1;
+    iPrev = iNext;
   }
-  /* Show the selected image */
-  LoadImage(iRnd);
-
-  iPrev = iRnd;
-
+  LoadImage(iNext);
 };
+
+function showPage(page) {
+  $('.page').hide();
+  $('.'+page).show();
+}
