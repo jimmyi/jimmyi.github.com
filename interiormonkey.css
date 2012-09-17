@@ -41,7 +41,7 @@
     width: 960px;
     overflow: hidden;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: -20px;
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
@@ -50,16 +50,20 @@
 
   .meet-me, .sustainability, .contact-me, .clients, .main {
     display: none;
-    background: white;
+    background: #8b897d;
     opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 930px;
-    margin-left: 200px;
+    width: 475px;
+    margin-left: 225px;
     margin-right: 15px;
     padding-bottom: 20px;
     padding-top: 10px;
-    min-height: 400px;
+    max-height: 625px;
+    min-height: 300px;
+    padding: 5px 20px;
+    overflow: scroll;
+    color: white;
   }
 
   .home {

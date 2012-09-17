@@ -63,7 +63,8 @@ $(document).ready(function() {
   });
 
   /* Start the slideshow one second after the page is ready */
-  setTimeout(LoadImages,100);
+  setTimeout(LoadImages,50);
+
   $('a').click(function(){
     var page = this.dataset.for;
     showPage(page);
