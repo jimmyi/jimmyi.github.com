@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     font-family:arial;
+    overflow: hidden;
   }
 
   ul {
@@ -11,6 +12,7 @@
   .pagewidthbg {
     width: 100%;
     margin-bottom: 40px;
+    overflow: hidden;
   }
 
   .menu {
@@ -20,15 +22,17 @@
   }
 
   .menu ul li {
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   .menu ul li a{
     color: #EF4925;
     text-decoration: none;
-    font-size: 35px;
-    /*font-family: 'Sonsie One', cursive;*/
-    font-family: 'Limelight', cursive;
+    font-size: 40px;
+    /*font-family: 'Limelight', cursive;*/
+    font-family: 'Emblema One', cursive;
+    /*font-family: 'Syncopate', sans-serif;*/
+    font-weight: 900;
 
 
   }
@@ -48,7 +52,8 @@
     z-index: 3;
   }
 
-  .meet-me, .sustainability, .contact-me, .clients, .main {
+  .meet-me, .sustainability, .contact-me, .clients, .home {
+    font-family: 'Righteous', cursive;
     display: none;
     background: #8b897d;
     opacity: 0.8;
@@ -60,16 +65,71 @@
     padding-bottom: 20px;
     padding-top: 10px;
     max-height: 625px;
-    min-height: 300px;
+    min-height: 450px;
     padding: 5px 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     color: white;
+
   }
 
+  .contact-me {
+    overflow: hidden;
+  }
+
+  .clients {
+    overflow: hidden;
+  }
   .home {
     display: block;
+    font-weight: normal;
+    min-height: 350px;
+  }
+
+  .testimonial {
+    padding: 10px 0;
+    background: #8b897d;
+    padding: 10px;
+    opacity: 0.8;
+    height: 400px;
+  }
+
+  .testimonial .quote-left, .testimonial .quote-right {
+    color: #fcdd41;
+    font-size: 40px;
+  }
+
+  .testimonial .quote-right {
+    float: right;
+    margin-right: 310px;
+    margin-top: -10px;
+  }
+
+  .testimonial .quote-by {
+    float: left;
+    position: relative;
+    bottom: 10px;
+    left: 300px;
+  }
+
+  .home ul li {
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 25px;
+    margin-left: 0px;
+  }
+
+  .clients {
     background: none;
-    color: black;
+    opacity: 1;
+    width: 700px;
+  }
+
+  .clients ul li {
+    padding: 10px 0;
+  }
+
+  .change, .dbc, .locbox, .pantheon {
+    padding-left: 70px;
   }
 
   .pagewidth {
