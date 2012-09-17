@@ -20,15 +20,22 @@
   }
 
   .menu ul li {
-    padding: 15px 0;
+    padding: 5px 0;
   }
 
   .menu ul li a{
-    color: #F28A21;
-    font-weight: bold;
+    color: #EF4925;
     text-decoration: none;
+    font-size: 35px;
+    /*font-family: 'Sonsie One', cursive;*/
+    font-family: 'Limelight', cursive;
+
+
   }
 
+  .menu ul li a:hover {
+    color: white;
+  }
   .headertop {
     height: 100px;
     width: 960px;
@@ -44,21 +51,21 @@
   .meet-me, .sustainability, .contact-me, .clients, .main {
     display: none;
     background: white;
-    opacity: 0.7;
+    opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 930px;
-    margin-left: 15px;
+    margin-left: 200px;
     margin-right: 15px;
     padding-bottom: 20px;
     padding-top: 10px;
     min-height: 400px;
   }
 
-  .main {
+  .home {
     display: block;
     background: none;
-    color: #98BF21;
+    color: black;
   }
 
   .pagewidth {
@@ -66,7 +73,6 @@
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    /*background-color: white;*/
     padding-bottom: 10px;
     z-index: 3;
     position: relative;
@@ -88,7 +94,7 @@
     left:0;
     height:100%;
     width:100%;
-      background: url(grid.png) repeat;
+    background: url(grid.png) repeat;
 
     /* Display on top of background */
     z-index:1;
@@ -99,7 +105,7 @@
     right:-150px;
     bottom:60px;
     width:140px;
-    height:38px;
+    height:10px;
     background-color:#dddddd;
     filter:alpha(opacity=80);
     -moz-opacity:0.8;
@@ -111,4 +117,36 @@
     line-height:12px;
     color:#333333;
   }
-
+/*
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Headland One', serif;
+font-family: 'Inder', sans-serif;
+font-family: 'Mate', serif;
+font-family: 'News Cycle', sans-serif;
+font-family: 'Sonsie One', cursive;
+font-family: 'Syncopate', sans-serif;
+font-family: 'Oleo Script', cursive;
+font-family: 'Flamenco', cursive;
+font-family: 'Emblema One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Racing Sans One', cursive;
+font-family: 'Days One', sans-serif;
+font-family: 'Antic', sans-serif;
+font-family: 'Monofett', cursive;
+font-family: 'Changa One', cursive;
+font-family: 'Nunito', sans-serif;
+font-family: 'Chango', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Shanti', sans-serif;
+font-family: 'Varela', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Averia Libre', cursive;
+font-family: 'Lemon', cursive;
+font-family: 'Karla', sans-serif;
+*/

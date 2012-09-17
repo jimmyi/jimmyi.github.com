@@ -1,53 +1,43 @@
 var aImages = new Array();
-var aURL = new Array();
-var aArtists = new Array();
+var aDescription = new Array();
+var aClients = new Array();
 var iPrev = -1;
 var iNext = -1;
+var slideshow_path = 'images/slideshow/';
 
-aImages[0] = "images/slideshow/Change1.jpg";
-aImages[1] = "images/slideshow/Change2.jpg";
-aImages[2] = "images/slideshow/Change3.jpg";
-aImages[3] = "images/slideshow/Change4.jpg";
-aImages[4] = "images/slideshow/Change5.jpg";
-aImages[5] = "images/slideshow/DBC1.jpg";
-aImages[6] = "images/slideshow/DBC2.jpg";
-aImages[7] = "images/slideshow/DBC3.jpg";
-aImages[8] = "images/slideshow/DBC4.jpg";
-aImages[9] = "images/slideshow/DBC5.jpg";
-aImages[10] = "images/slideshow/DBC6.jpg";
-aImages[11] = "images/slideshow/LocBox1.jpg";
-aImages[12] = "images/slideshow/Pantheon1.jpg";
-aImages[13] = "images/slideshow/Pantheon2.jpg";
+aImages.push("Change2.jpg");
+aImages.push("DBC1.jpg");
+aImages.push("DBC2.jpg");
+aImages.push("DBC3.jpg");
+aImages.push("DBC4.jpg");
+aImages.push("DBC5.jpg");
+aImages.push("DBC6.jpg");
+aImages.push("DBC7.jpg");
+aImages.push("DBC8.jpg");
+aImages.push("DBC9.jpg");
+aImages.push("LocBox1.jpg");
+aImages.push("LocBox2.jpg");
+aImages.push("Pantheon1.jpg");
+aImages.push("Pantheon2.jpg");
+aImages.push("Pantheon3.jpg");
 
-aURL[0] = "http://kunst.canvasinabox.com/?_globalsearch=47-7";
-aURL[1] = "http://kunst.canvasinabox.com/?_globalsearch=48-7";
-aURL[2] = "http://kunst.canvasinabox.com/?_globalsearch=46-7";
-aURL[3] = "http://kunst.canvasinabox.com/?_globalsearch=133-18";
-aURL[4] = "http://kunst.canvasinabox.com/?_globalsearch=174-27";
-aURL[5] = "http://kunst.canvasinabox.com/?_globalsearch=173-27";
-aURL[6] = "http://kunst.canvasinabox.com/?_globalsearch=25-5";
-aURL[7] = "http://kunst.canvasinabox.com/?_globalsearch=47-7";
-aURL[8] = "http://kunst.canvasinabox.com/?_globalsearch=48-7";
-aURL[9] = "http://kunst.canvasinabox.com/?_globalsearch=46-7";
-aURL[10] = "http://kunst.canvasinabox.com/?_globalsearch=133-18";
-aURL[11] = "http://kunst.canvasinabox.com/?_globalsearch=174-27";
-aURL[12] = "http://kunst.canvasinabox.com/?_globalsearch=173-27";
-aURL[13] = "http://kunst.canvasinabox.com/?_globalsearch=25-5";
 
-aArtists[0] = "Marcel Verkaart";
-aArtists[1] = "Marcel Verkaart";
-aArtists[2] = "Marcel Verkaart";
-aArtists[3] = "Marco Schippers";
-aArtists[4] = "Sylvia Hennequin";
-aArtists[5] = "Sylvia Hennequin";
-aArtists[6] = "Jonathan Vos";
-aArtists[7] = "Marcel Verkaart";
-aArtists[8] = "Marcel Verkaart";
-aArtists[9] = "Marcel Verkaart";
-aArtists[10] = "Marco Schippers";
-aArtists[11] = "Sylvia Hennequin";
-aArtists[12] = "Sylvia Hennequin";
-aArtists[13] = "Jonathan Vos";
+aClients.push("Change.org");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push("Dev Bootcamp");
+aClients.push( "Dev Bootcamp");
+aClients.push( "LocBox");
+aClients.push( "LocBox");
+aClients.push("Pantheon");
+aClients.push("Pantheon");
+aClients.push("Pantheon");
+
 
 $(document).ready(function() {
 
@@ -57,7 +47,7 @@ $(document).ready(function() {
   /* Define the function that triggers to fade in the background as soon as the image has loaded */
   $("img#bg").load(function() {
     /* Fade in during 3 seconds */
-    $("img#bg").fadeTo(2000,1);
+    $("img#bg").fadeTo(2000, 1);
 
     /* Animate the picture description during 1 second */
     setTimeout(function() { $("#image_description").animate({right: '+=150'}, 500) }, 500);
@@ -84,24 +74,20 @@ $(document).ready(function() {
 function LoadImage(iNr) {
 
   /* Assign the new image to the background */
-  $("img#bg").attr("src", aImages[iNr]);
+  $("img#bg").attr("src", slideshow_path+aImages[iNr]);
 
   /* Assign the artist name to the description */
-  $("#image_artist").html(aArtists[iNr]);
-
-  /* Assign the image url to the description */
-  $("a#image_url").attr("href", aURL[iNr]);
-  $("a#image_url").html("for sale @canvasinabox.com");
+  $("#image_artist").html(aClients[iNr]);
 
 };
 
 function LoadImages() {
   if (iNext == aImages.length -1) {
     iNext = 0;
-    iPrev = aImages.length - 1;
+    iPrev = 0;
   } else {
-    iNext = iPrev+1;
     iPrev = iNext;
+    iNext = iPrev+1;
   }
   LoadImage(iNext);
 };
