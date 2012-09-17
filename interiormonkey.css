@@ -13,12 +13,14 @@
     width: 100%;
     margin-bottom: 40px;
     overflow: hidden;
+    min-height: 625px;
   }
 
   .menu {
     position: relative;
     z-index: 3;
     float: left;
+    width: 400px;
   }
 
   .menu ul li {
@@ -39,6 +41,8 @@
 
   .menu ul li a:hover {
     color: white;
+    background-color: #EF4925;
+    padding: 15px;
   }
   .headertop {
     height: 100px;
@@ -53,36 +57,56 @@
   }
 
   .meet-me, .sustainability, .contact-me, .clients, .home {
-    font-family: 'Righteous', cursive;
     display: none;
     background: #8b897d;
     opacity: 0.8;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 475px;
-    margin-left: 225px;
-    margin-right: 15px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    max-height: 625px;
-    min-height: 450px;
-    padding: 5px 20px;
     overflow-y: scroll;
     color: white;
-
+    font-family: 'Righteous', cursive;
+    text-align: left;
+    width: 475px;
+    max-height: 625px;
+    min-height: 550px;
+    z-index: 3;
+    padding: 5px 20px;
+    position: relative;
+    left: 70px;
+    top: 60px;
   }
 
-  .contact-me {
+  /*.contact-me {
     overflow: hidden;
+    border-radius: 100%;
+    width: 400px;
+    height: 350px;
+    padding: 0px
+  }*/
+
+  .contact-me .contact-content {
+    text-align: center;
+    margin-top: 60px;
   }
 
   .clients {
     overflow: hidden;
   }
-  .home {
+  .home, .contact-me {
     display: block;
     font-weight: normal;
     min-height: 350px;
+    padding: 0px;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    left: 120px;
+  }
+  .contact-me {
+    display: none;
+  }
+
+  .home ul {
+    padding: 0px;
+    margin: 40px 0 0 0;
   }
 
   .testimonial {
